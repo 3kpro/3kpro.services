@@ -1,0 +1,11 @@
+# VS Code
+.vscode/
+*.code-workspace
+
+# build artifacts
+*.json
+!infra/bicep/**/*.json
+
+# OS junk
+Thumbs.db
+Desktop.ini

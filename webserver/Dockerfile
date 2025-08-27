@@ -12,6 +12,7 @@ COPY .  .
 
 # Use non-root user for better security
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup || true
+RUN chown -R appuser:appgroup /app
 USER appuser
 
 ENV NODE_ENV=production

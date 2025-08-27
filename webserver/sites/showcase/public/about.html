@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Showcase Site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>3KPRO Showcase Site</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="/app/showcase/api/info">API Info</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>About This Showcase</h2>
+            <p>This example site demonstrates how to structure your projects for 3KPRO Webserver.</p>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h3>Site Structure</h3>
+                <p>The site follows this structure:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><code>sites/showcase/public/</code> - Static files</li>
+                    <li><code>sites/showcase/app.js</code> - Dynamic Express router</li>
+                </ul>
+            </div>
+            <div class="feature">
+                <h3>How It Works</h3>
+                <p>The webserver automatically:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Serves static files from <code>/public</code> folder</li>
+                    <li>Mounts Express routes from <code>app.js</code></li>
+                    <li>Provides a clean URL structure</li>
+                </ul>
+            </div>
+            <div class="feature">
+                <h3>Technologies</h3>
+                <p>This showcase demonstrates:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>HTML5, CSS3 and JavaScript</li>
+                    <li>Express.js for API endpoints</li>
+                    <li>Responsive design principles</li>
+                    <li>Fetch API for AJAX requests</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 3KPRO Showcase Site. Created as a demonstration.</p>
+        <p>Status: <span id="status">Checking...</span></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

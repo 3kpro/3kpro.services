@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase Site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>3KPRO Showcase Site</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="/app/showcase/api/info">API Info</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to the Showcase Site</h2>
+            <p>This is an example site demonstrating both static content and dynamic API endpoints.</p>
+            <a href="/app/showcase/api/hello" class="button">Try the API</a>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h3>Static Content</h3>
+                <p>This site demonstrates static HTML, CSS, and JavaScript served directly from the file system.</p>
+            </div>
+            <div class="feature">
+                <h3>Dynamic API</h3>
+                <p>The API endpoints are powered by Express.js and demonstrate server-side functionality.</p>
+            </div>
+            <div class="feature">
+                <h3>HTTPS Support</h3>
+                <p>Access this site via HTTPS through the nginx reverse proxy.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 3KPRO Showcase Site. Created as a demonstration.</p>
+        <p>Status: <span id="status">Checking...</span></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

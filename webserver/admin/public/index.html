@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>3kpro Webserver Admin</title>
+    <style>
+      body{font-family:Segoe UI,Helvetica,Arial;margin:24px}
+      table{border-collapse:collapse;width:100%}
+      th,td{border:1px solid #ddd;padding:8px}
+      th{background:#f4f4f4}
+      button{padding:6px 10px}
+    </style>
+  </head>
+  <body>
+    <h1>3kpro Webserver — Admin</h1>
+    <p>Enable/disable sites below.</p>
+    <div id="content">Loading…</div>
+
+    <script>
+      async function load() {
+        const res = await fetch('/admin/api/sites');
+        const sites = await res.json();
+        const rows = sites.map(s => `<tr><td>${s.name}</td><td>${s.hasPublic? 'static':''}</td><td>${s.hasApp? 'app':''}</td><td>${s.enabled? 'enabled':'disabled'}</td><td><button onclick="toggle('${s.name}', ${s.enabled? 'false':'true'})">${s.enabled? 'Disable':'Enable'}</button></td></tr>`).join('');
+        document.getElementById('content').innerHTML = `<table><tr><th>Site</th><th>Static</th><th>App</th><th>State</th><th>Action</th></tr>${rows}</table>`;
+      }
+      async function toggle(name, enabled) {
+        await fetch(`/admin/api/sites/${name}/enable`, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({enabled})});
+        load();
+      }
+      load();
+    </script>
+  </body>
+</html>

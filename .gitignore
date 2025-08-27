@@ -5,6 +5,11 @@
 # build artifacts
 *.json
 !infra/bicep/**/*.json
+!webserver/package.json
+!webserver/package-lock.json
+
+# Node.js dependencies
+webserver/node_modules/
 
 # OS junk
 Thumbs.db

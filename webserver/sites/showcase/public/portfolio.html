@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Showcase Site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .portfolio-item {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .portfolio-content {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>3KPRO Showcase Site</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="/app/showcase/api/info">API Info</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Portfolio</h2>
+            <p>Example portfolio items for demonstration purposes.</p>
+        </section>
+
+        <div class="portfolio">
+            <div class="portfolio-item">
+                <img src="https://picsum.photos/id/1/600/400" alt="Project 1">
+                <div class="portfolio-content">
+                    <h3>Project One</h3>
+                    <p>A sample project to demonstrate layout and styling.</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="https://picsum.photos/id/20/600/400" alt="Project 2">
+                <div class="portfolio-content">
+                    <h3>Project Two</h3>
+                    <p>Another example project with different imagery.</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="https://picsum.photos/id/42/600/400" alt="Project 3">
+                <div class="portfolio-content">
+                    <h3>Project Three</h3>
+                    <p>A third example showcasing the grid layout.</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="https://picsum.photos/id/96/600/400" alt="Project 4">
+                <div class="portfolio-content">
+                    <h3>Project Four</h3>
+                    <p>The fourth example project in our showcase.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 3KPRO Showcase Site. Created as a demonstration.</p>
+        <p>Status: <span id="status">Checking...</span></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
